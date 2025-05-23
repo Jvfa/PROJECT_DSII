@@ -1,6 +1,10 @@
-package main.java.br.com.saymyname.saymyname.Controller;
+package br.com.saymyname.saymyname.Controller;
 
-import javax.management.modelmbean.ModelMBean;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller 
 public class SaymynameController {
@@ -9,9 +13,9 @@ public class SaymynameController {
         return "home";
     }
     @PostMapping("/enviarnome")
-    public String postEnviar(@ReqeustParam("nome") String name,
+    public String postEnviar(@RequestParam("nome") String name,
                             Model model) {
-        model.addAttribute(attributeName:"resultado", name);
+        model.addAttribute("resultado", name);
         return "home";            
         }    
 }
