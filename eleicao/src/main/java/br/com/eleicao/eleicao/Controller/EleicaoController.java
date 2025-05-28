@@ -19,6 +19,15 @@ public class EleicaoController {
                                     Model model) {
     
     String resultado;
-    if(idade)
+    if(idade >=16 && idade < 18){
+        resultado="Votação Facultativa";
+    } else if(idade >= 18 && idade < 70){
+        resultado="Votação Obrigatoria";
+    }else if(idade >= 70){
+        resultado="Votação Opcional para idosos";
+    }
+    model.addAllAttributes("resultado", resultado);
+    return "index";
+
                                     }
 }
