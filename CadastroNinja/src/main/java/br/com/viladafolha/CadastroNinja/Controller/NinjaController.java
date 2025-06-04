@@ -6,6 +6,8 @@ import br.com.viladafolha.CadastroNinja.Service.NinjaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/api/ninja")
@@ -25,6 +27,10 @@ public class NinjaController {
     public NinjaEntity cadastrar(@RequestBody NinjaEntity ninja){
         return ninjaService.cadastrar(ninja);
     }
-
+    //Listar
+    @GetMapping("/listar")
+    public List<NinjaEntity> listar(){
+        return ninjaService.listar();
+    }
 }
 

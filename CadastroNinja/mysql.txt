@@ -1,0 +1,11 @@
+#Definir o banco para a conexao 
+spring.datasource.url=jdbc:mysql://localhost:3306/xtudo?useTimezone=true&serverTimezone=America/Fortaleza&user=root&password=123456
+
+#Atualizar o BD automaticamente
+spring.jpa.hibernate.ddl-auto=update
+
+#Exibir no terminal o SQL sendo excutado
+spring.jpa.show-sql=true
+
+#Informa para nao formatar o SQL
+spring.jpa.properties.hibernate.format_sql=false
