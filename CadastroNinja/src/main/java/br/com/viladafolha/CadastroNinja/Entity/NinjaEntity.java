@@ -15,7 +15,6 @@ import org.hibernate.validator.constraints.br.CPF;
 /*
 ATRIBUTOS DA NOSSA CLASSE
 */
-
 public class NinjaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,4 +29,3 @@ public class NinjaEntity {
     @Column(name="email_ninja")
     private String email;
 }
-

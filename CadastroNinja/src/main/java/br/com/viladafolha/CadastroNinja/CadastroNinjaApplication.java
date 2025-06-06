@@ -9,4 +9,5 @@ public class CadastroNinjaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CadastroNinjaApplication.class, args);
 	}
+
 }

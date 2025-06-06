@@ -1,14 +1,17 @@
 package br.com.viladafolha.CadastroNinja.Service;
 
-
 import br.com.viladafolha.CadastroNinja.Entity.NinjaEntity;
 import br.com.viladafolha.CadastroNinja.Repository.NinjaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+/*
+IMPLEMENTACAO DAS FUNCOES
+*/
 public class NinjaService {
     @Autowired
     private NinjaRepository ninjaRepository;
@@ -21,4 +24,6 @@ public class NinjaService {
     public List<NinjaEntity> listar(){
         return ninjaRepository.findAll();
     }
+
+
 }
